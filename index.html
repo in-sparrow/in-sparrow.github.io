@@ -2,17 +2,54 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>포트폴리오 | [Seulki Choe]</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seulki Choe Portfolio</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #f9f9f9; color: #333;
+      color: #333;
+    }
+    /* Intro Section */
+    #intro {
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      height: 100vh;
+      background: #4a90e2;
+      color: #fff;
+      text-align: center;
+    }
+    #intro h1 {
+      font-size: 48px;
+    }
+    #intro button {
+      margin-top: 30px;
+      padding: 15px 40px;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      background: #fff;
+      color: #4a90e2;
+      font-weight: bold;
+    }
+    /* Main Content */
+    #main {
+      display: none;
     }
     header {
       background: #4a90e2; color: white;
       padding: 40px 20px; text-align: center;
+    }
+    nav {
+      background: #333; color: white;
+      padding: 10px; text-align: center;
+    }
+    nav a {
+      color: white; text-decoration: none; margin: 0 15px;
+      font-weight: bold;
     }
     section {
       max-width: 800px; margin: 40px auto; padding: 0 20px;
@@ -21,55 +58,87 @@
     .project {
       border: 1px solid #ddd; border-radius: 8px;
       padding: 20px; margin-bottom: 20px;
-      background: white;
+      background: #fff;
     }
     footer {
       text-align: center; padding: 20px;
       background: #eee; font-size: 0.9em;
     }
-    .contact a {
-      display: inline-block; margin: 0 10px; text-decoration: none; color: #4a90e2;
-    }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>[Seulki Choe]</h1>
-    <p>안녕하세요! 저는 PM [Seulki Choe]입니다.</p>
-  </header>
-
-  <section>
-    <h2>🗂️ 포트폴리오</h2>
-    <div class="project">
-      <h3>TSC project</h3>
-      <p>해외 기술 지원 계약 PM</p>
-      <a href="#" target="_blank">GitHub Repo</a> | 
-      <a href="#" target="_blank">Demo Link</a>
-    </div>
-    <div class="project">
-      <h3>프로젝트 2</h3>
-      <p>다른 프로젝트 내용도 추가!</p>
-    </div>
+  <!-- Intro -->
+  <section id="intro">
+    <h1>Seulki Choe</h1>
+    <button onclick="showMain()">Enter Portfolio</button>
   </section>
 
-  <section>
-    <h2>📄 이력서 & 스킬</h2>
-    <p>간단한 이력 정보와 기술 스택을 적어주세요.</p>
-    <a href="resume.pdf" download>이력서 PDF 다운로드</a>
-  </section>
+  <!-- Main Content -->
+  <div id="main">
+    <header>
+      <h1>Seulki Choe</h1>
+      <p>안녕하세요! 자동차 엔지니어 Seulki Choe입니다.</p>
+    </header>
 
-  <section class="contact">
-    <h2>📬 Contact</h2>
-    <p>연락은 언제든 환영합니다!</p>
-    <a href="mailto:youremail@example.com">Email</a>
-    <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-    <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
-  </section>
+    <nav>
+      <a href="#about">소개</a>
+      <a href="#projects">프로젝트</a>
+      <a href="#resume">이력</a>
+      <a href="#contact">연락처</a>
+    </nav>
 
-  <footer>
-    &copy; 2025 [seulki.choe]. All rights reserved.
-  </footer>
+    <section id="about">
+      <h2>소개</h2>
+      <p>국민대학교 기계시스템공학부 졸업 (2016)<br/>
+         자동차 부품사 Tier1 근무 (2018~2022)<br/>
+         GMTCK 근무 (2022~현재)
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>프로젝트</h2>
+      <div class="project">
+        <h3>프로젝트 1: EV 배터리 모듈 설계 개선</h3>
+        <p>배터리 팩 모듈의 열관리 성능 최적화 및 생산성 향상을 위한 구조 설계 프로젝트.</p>
+      </div>
+      <div class="project">
+        <h3>프로젝트 2: 차량 차체 공정 자동화</h3>
+        <p>자동차 Tier1 근무 시점에 차체 프레임 조립 자동화 라인 설계 및 품질 개선 활동 수행.</p>
+      </div>
+      <div class="project">
+        <h3>프로젝트 3: GMTCK 글로벌 협업 프로그램</h3>
+        <p>신차 개발 프로젝트 관리 및 해외 협력사와의 기술 검토, 품질 이슈 대응.</p>
+      </div>
+    </section>
+
+    <section id="resume">
+      <h2>이력</h2>
+      <p>
+        - 국민대학교 기계시스템공학부 졸업 (2016)<br/>
+        - 자동차 Tier1 근무 (2018~2022)<br/>
+        - GMTCK 근무 (2022~현재)
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>연락처</h2>
+      <p>Email: seulki.choe@gm.com</p>
+      <p>GitHub: <a href="https://github.com/seulki-choe" target="_blank">github.com/seulki-choe</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/seulki-choe" target="_blank">linkedin.com/in/seulki-choe</a></p>
+    </section>
+
+    <footer>
+      &copy; 2025 Seulki Choe. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    function showMain() {
+      document.getElementById('intro').style.display = 'none';
+      document.getElementById('main').style.display = 'block';
+    }
+  </script>
 
 </body>
 </html>
